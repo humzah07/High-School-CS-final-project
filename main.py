@@ -24,20 +24,30 @@ def menu():
         print(f" {action} ")
 
 def intro():
-  input("What would you like to do today? ")
-  if input == "a":
+  input_1 = input("What would you like to do today? ")
+  if input_1 == "a":
     note_1()
+  if input_1 == "b":
+    note_2()
 
 def note_1():
   filename = input("What is the title of the note: ")
-  character = input("What do you want to note today? ")
+  character = input("What do you want to note(Note down here below)? ")
+  print("\n")
   with open(filename, 'w') as file_object:
     file_object.write(character)
   filename_2 = open(filename, "r")
   print(filename_2.read())
 
+def note_2():
+  filename = input("Which file do you want to open?: ") 
+  with open(filename, 'w') as file_object:
+    file_object.write(filename)
+  filename_2 = open(filename, "r")
+  print(filename_2.read())
+
+
 
 main_menu()
 menu()
 intro()
-note_1()
