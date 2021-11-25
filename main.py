@@ -30,24 +30,32 @@ def intro():
   if input_1 == "b":
     note_2()
 
+
 def note_1():
   filename = input("What is the title of the note: ")
+  file_name = filename
   character = input("What do you want to note(Note down here below)? ")
   print("\n")
-  with open(filename, 'w') as file_object:
+  with open(file_name, 'w') as file_object:
     file_object.write(character)
   filename_2 = open(filename, "r")
   print(filename_2.read())
 
 def note_2():
-  filename = input("Which file do you want to open?: ") 
-  with open(filename, 'w') as file_object:
-    file_object.write(filename)
-  filename_2 = open(filename, "r")
+  filename = input("Which file do you want to open?: ")
+  print("\n")
+  filename_2 = open(filename, "r") 
   print(filename_2.read())
+  add_note = input("Do you want to add more? ")
+  if add_note == "yes":
+    add = input("What do you want to add:\n")
+    with open(filename, 'a') as file_object:
+      file_object.write(add)
+  if add_note == "no":
+    quit() 
+  
 
-
-
-main_menu()
-menu()
-intro()
+while True:
+  main_menu()
+  menu()
+  intro()
