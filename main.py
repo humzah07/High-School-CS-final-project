@@ -5,18 +5,20 @@
 # Name: Humzah Zahid Malik
 # Description: Large Scale program
 
+import os
+
 def main_menu():
     print(""" Hi!, Welcome to the Notes Program 
     
   In this program, you will be able to create, edit and delete notes.
   
-  You will be allowed maximum 10 notes on this program. 
+  You can make unlimited files on this program
   
-  *Notes*: Press space at the start when editing an existing file. 
-           Press enter to start a new line""")
+  *Notes*: Create a file first in order to access other features such as 
+   """)
     print("\n")
 
-valid_actions = ["a: create a file", "b: edit a file", "c: delete a file", "d: Close the program"]
+valid_actions = ["a: create a file", "b: view a file", "c: edit a file", "d: delete a file", "e: Close the program"]
 
 def menu():
     print(""" Choose an action: """)
@@ -29,6 +31,10 @@ def intro():
     note_1()
   if input_1 == "b":
     note_2()
+  if input_1 == "c":
+    note_3()
+  if input_1 == "d":
+    note_4()
 
 
 def note_1():
@@ -46,14 +52,37 @@ def note_2():
   print("\n")
   filename_2 = open(filename, "r") 
   print(filename_2.read())
-  add_note = input("Do you want to add more? ")
-  if add_note == "yes":
-    add = input("What do you want to add:\n")
-    with open(filename, 'a') as file_object:
-      file_object.write(add)
-  if add_note == "no":
-    quit() 
-  
+  quit()
+
+def note_3():
+    filename = input("Which file do you want to open?: ")
+    print("\n")
+    filename_2 = open(filename, "r") 
+    print(filename_2.read())
+    add_note = input("Do you want to add more? ")
+    if add_note == "yes":
+        add = input("What do you want to add:\n")
+        with open(filename, "a+") as file_object:
+          file_object.write("\n")
+          data = file_object.read(100)
+          if len(data) > 0 :
+              file_object.write("\n")
+        file_object.write(add)
+    if add_note == "no":
+        quit() 
+
+def note_4():
+    filename = input("Which file do you want to open?: ")
+    print("\n")
+    filename_2 = open(filename, "r") 
+    print(filename_2.read())
+    print("\n")
+    delete = input("Do you want to delete file: ")
+    if delete == "yes":
+      os.remove(filename)
+    if delete == "no":
+      main_menu()
+
 
 while True:
   main_menu()

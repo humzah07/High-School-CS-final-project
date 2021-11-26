@@ -17,3 +17,9 @@ def first_note_add():
     print(filename_3.read())
   if add_note == "no":
     quit()  
+
+
+file_object.seek(0)
+data = file_object.read(100)
+if len(data) > 0 :
+file_object.write("\n")
