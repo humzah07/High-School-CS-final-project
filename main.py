@@ -68,14 +68,19 @@ def note_1():
 
 
 def note_2():
-  filename = input("Which file do you want to open?: ")
-  print("\n")
-  filename_2 = open(filename, "r")
-  print(filename + ":")
-  print(filename_2.read())
-  print("\n")
-  line()
-  intro()
+  try:
+    filename = input("Which file do you want to open?: ")
+    print("\n")
+    filename_2 = open(filename, "r")
+    print(filename + ":")
+    print(filename_2.read())
+    print("\n")
+    line()
+    intro()
+  except FileNotFoundError:
+    print("File does not exists. returning to main menu")
+    line()
+    intro()
 
 
 def note_3():
