@@ -23,3 +23,13 @@ file_object.seek(0)
 data = file_object.read(100)
 if len(data) > 0 :
 file_object.write("\n")
+
+
+valid_actions = ["a: create a file", "b: view a file", "c: edit a file", "d: delete a file", "e: Close the program"]
+
+def menu():
+    print(""" Choose an action: """)
+    for action in valid_actions:
+        print(f" {action} ")
+
+valid_actions_1 = ["a", "b", "c", "d", "e"]
