@@ -26,12 +26,12 @@ def main_menu():
           
    """)
     print("\n")
-    print(""" Choose an action: """)
-    for action in valid_actions:
-        print(f" {action} ")
 
 
 def intro():
+  print(""" Choose an action: """)
+  for action in valid_actions:
+        print(f" {action} ")
   input_1 = input("What would you like to do today? ")
   if input_1 == "a":
     note_1()
@@ -69,6 +69,7 @@ def note_2():
   print(filename_2.read())
   print("\n")
   line()
+  intro()
 
 def note_3():
     filename = input("Which file do you want to edit?: ")
@@ -86,13 +87,15 @@ def note_3():
           if len(data) > 0 :
               file_object.write("\n")
           file_object.write(add)
-          print("\n")
-          filename_3 = open(filename, "r")
-          print(filename + ":") 
-          print(filename_3.read())
-          print("\n")
+        print("\n")
+        filename_3 = open(filename, "r")
+        print(filename + ":") 
+        print(filename_3.read())
+        print("\n")
+        line()
+        intro()
     if add_note == "no":
-        quit()                                
+        intro()                        
 
 def note_4():
     filename = input("Which file do you want to delete?: ")
