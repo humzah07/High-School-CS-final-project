@@ -71,6 +71,7 @@ def note_2():
   line()
   intro()
 
+
 def note_3():
     filename = input("Which file do you want to edit?: ")
     print("\n")
@@ -100,14 +101,18 @@ def note_3():
 def note_4():
     filename = input("Which file do you want to delete?: ")
     print("\n")
-    filename_2 = open(filename, "r") 
+    filename_2 = open(filename, "r")
+    print(filename + ":") 
     print(filename_2.read())
     print("\n")
     delete = input("Do you want to delete file: ")
     if delete == "yes":
       os.remove(filename)
+      line()
+      intro()
     if delete == "no":
-      main_menu()
+      line()
+      intro()
 
 def line():
     print("-------------------------------------------------------------------")
