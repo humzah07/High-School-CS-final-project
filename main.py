@@ -5,9 +5,12 @@
 # Name: Humzah Zahid Malik
 # Description: Large Scale program
 
+
 import os
 
+
 valid_actions = ["a: create a file", "b: view a file", "c: edit a file", "d: delete a file", "e: Close the program"]
+
 
 def main_menu():
     print(""" Hi!, Welcome to the Notes Program 
@@ -20,9 +23,10 @@ def main_menu():
 
            You can only write one line when creating a File. 
            To add more, go to "edit a file" to add one line at a time.
-
+           
            You can not have two files with the same name.  
-           New file created with the same name will overwrite the existing file's contents.
+           New file created with the same name will overwrite the existing file's
+           contents.
           
    """)
     print("\n")
@@ -44,7 +48,8 @@ def intro():
   if input_1 == "e":
     quit()
   if input_1 not in valid_actions:
-    quit()
+    print("invalid action")
+    line()
 
 
 def note_1():
@@ -60,6 +65,7 @@ def note_1():
   print("\n")
   line()
   intro()
+
 
 def note_2():
   filename = input("Which file do you want to open?: ")
@@ -96,7 +102,9 @@ def note_3():
         line()
         intro()
     if add_note == "no":
-        intro()                        
+        line()
+        intro()
+
 
 def note_4():
     filename = input("Which file do you want to delete?: ")
@@ -113,6 +121,7 @@ def note_4():
     if delete == "no":
       line()
       intro()
+
 
 def line():
     print("-------------------------------------------------------------------")
