@@ -142,6 +142,7 @@ def note_4():
         delete = input("Do you want to delete file: ")
         if delete == "yes":
             os.remove(filename)
+            print("file : '" + filename + "'" + " is deleted")
             line()
             intro()
         if delete == "no":
