@@ -7,6 +7,10 @@
 
 
 import os
+import create_file
+import view_files
+import edit_files
+import delete_files
 
 # Creates a menu of valid actions in this program
 
@@ -47,111 +51,19 @@ def intro():
         print(f" {action} ")
     input_1 = input("What would you like to do today? ")
     if input_1 == "a":
-        note_1()
+        create_file.note_1()
     if input_1 == "b":
-        note_2()
+        view_files.note_2()
     if input_1 == "c":
-        note_3()
+        edit_files.note_3()
     if input_1 == "d":
-        note_4()
+        delete_files.note_4()
     if input_1 == "e":
         print(" You have closed the program ")
         quit()
     if input_1 not in valid_actions:
         print("invalid action")
         line()
-
-
-def note_1():
-    """ This function creates new files """
-    filename = input("What is the title of the note: ")
-    file_name = filename
-    character = input("What do you want to note? ")
-    print("\n")
-    with open(file_name, 'w') as file_object:
-        file_object.write(character)
-    filename_2 = open(filename, "r")
-    print(file_name + ":")
-    print(filename_2.read())
-    print("\n")
-    line()
-    intro()
-
-
-def note_2():
-    """ This functions opens files in view mode """
-    try:
-        filename = input("Which file do you want to open?: ")
-        print("\n")
-        filename_2 = open(filename, "r")
-        print(filename + ":")
-        print(filename_2.read())
-        print("\n")
-        line()
-        intro()
-    except FileNotFoundError:
-        print("File does not exists. returning to main menu")
-        line()
-        intro()
-
-
-def note_3():
-    """ This function allows user to
-        edit an existing file """
-    try:
-        filename = input("Which file do you want to edit?: ")
-        print("\n")
-        filename_2 = open(filename, "r")
-        print(filename + ":")
-        print(filename_2.read())
-        print("\n")
-        add_note = input("Do you want to add more? ")
-        if add_note == "yes":
-            add = input("What do you want to add:\n")
-            with open(filename, "a+") as file_object:
-                file_object.write("\n")
-                data = file_object.read(100)
-                if len(data) > 0:
-                    file_object.write("\n")
-                file_object.write(add)
-            print("\n")
-            filename_3 = open(filename, "r")
-            print(filename + ":")
-            print(filename_3.read())
-            print("\n")
-            line()
-            intro()
-        if add_note == "no":
-            line()
-            intro()
-    except FileNotFoundError:
-        print("File does not exists. returning to main menu")
-        line()
-        intro()
-
-
-def note_4():
-    """ This functions allows user to delete an existing file """
-    try:
-        filename = input("Which file do you want to delete?: ")
-        print("\n")
-        filename_2 = open(filename, "r")
-        print(filename + ":")
-        print(filename_2.read())
-        print("\n")
-        delete = input("Do you want to delete file: ")
-        if delete == "yes":
-            os.remove(filename)
-            print("file : '" + filename + "'" + " is deleted")
-            line()
-            intro()
-        if delete == "no":
-            line()
-            intro()
-    except FileNotFoundError:
-        print("File does not exists. returning to main menu")
-        line()
-        intro()
 
 
 def line():
