@@ -1,26 +1,30 @@
 # changelog
 All notable changes of this project will be documented here 
 
-## [0.0.1] 2021-12-23
+## [0.0.1] 2021-11-23
 ### initial commit
 - function for creating files has been created
 - an intro is made for the program
 - a menu is made, lists all the valid actions
 
-## [0.0.2] 2021-12-24
+## [0.0.2] 2021-11-24
 ### Added
 - function for viewing files has been created
 
-## [0.0.3] 2021-12-25
+## [0.0.3] 2021-11-25
 ### Added
 - a loop is added for the program
 
-## [0.0.4] 2021-12-26
+## [0.0.4] 2021-11-26
 ### Added
 - function for deleting files has been created
 - the intro for the program is edited
 - function is created for editing files
 
-## [0.0.4] 2021-12-30
+## [0.0.4] 2021-11-30
 ### Added
 - code is corrected through the Python Style Guide
+
+## [0.0.5] 2021-12-03
+### Added
+- Modules are created for functions
