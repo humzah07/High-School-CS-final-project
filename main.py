@@ -6,8 +6,7 @@
 # Description: Large Scale program
 
 
-import os
-import create_file
+import files_create
 import view_files
 import edit_files
 import delete_files
@@ -51,7 +50,7 @@ def intro():
         print(f" {action} ")
     input_1 = input("What would you like to do today? ")
     if input_1 == "a":
-        create_file.note_1()
+        notes_1()
     if input_1 == "b":
         view_files.note_2()
     if input_1 == "c":
@@ -65,6 +64,21 @@ def intro():
         print("invalid action")
         line()
 
+
+def notes_1():
+    """ This function creates new files """
+    filename = input("What is the title of the note: ")
+    file_name = filename
+    character = input("What do you want to note? ")
+    print("\n")
+    with open(file_name, 'w') as file_object:
+        file_object.write(character)
+    filename_2 = open(filename, "r")
+    print(file_name + ":")
+    print(filename_2.read())
+    print("\n")
+    line()
+    intro()
 
 def line():
     """ This creates a line between the output to seperate code """

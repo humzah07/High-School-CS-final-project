@@ -1,6 +1,6 @@
 import main
 
-def note_1():
+def notes_1():
     """ This function creates new files """
     filename = input("What is the title of the note: ")
     file_name = filename
