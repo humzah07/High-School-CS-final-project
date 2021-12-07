@@ -6,10 +6,7 @@
 # Description: Large Scale program
 
 
-import files_create
-import view_files
-import edit_files
-import delete_files
+import os
 
 # Creates a menu of valid actions in this program
 
@@ -52,11 +49,11 @@ def intro():
     if input_1 == "a":
         notes_1()
     if input_1 == "b":
-        view_files.note_2()
+        note_2()
     if input_1 == "c":
-        edit_files.note_3()
+        note_3()
     if input_1 == "d":
-        delete_files.note_4()
+        note_4()
     if input_1 == "e":
         print(" You have closed the program ")
         quit()
@@ -83,6 +80,82 @@ def notes_1():
 def line():
     """ This creates a line between the output to seperate code """
     print("------------------------------------------------------------------")
+
+
+def note_2():
+    """ This functions opens files in view mode """
+    try:
+        filename = input("Which file do you want to open?: ")
+        print("\n")
+        filename_2 = open(filename, "r")
+        print(filename + ":")
+        print(filename_2.read())
+        print("\n")
+        line()
+        intro()
+    except FileNotFoundError:
+        print("File does not exists. returning to main menu")
+        line()
+        intro()
+
+
+def note_3():
+    """ This function allows user to
+        edit an existing file """
+    try:
+        filename = input("Which file do you want to edit?: ")
+        print("\n")
+        filename_2 = open(filename, "r")
+        print(filename + ":")
+        print(filename_2.read())
+        print("\n")
+        add_note = input("Do you want to add more? ")
+        if add_note == "yes":
+            add = input("What do you want to add:\n")
+            with open(filename, "a+") as file_object:
+                file_object.write("\n")
+                data = file_object.read(100)
+                if len(data) > 0:
+                    file_object.write("\n")
+                file_object.write(add)
+            print("\n")
+            filename_3 = open(filename, "r")
+            print(filename + ":")
+            print(filename_3.read())
+            print("\n")
+            line()
+            intro()
+        if add_note == "no":
+            line()
+            intro()
+    except FileNotFoundError:
+        print("File does not exists. returning to main menu")
+        line()
+        intro()
+
+
+def note_4():
+    """ This functions allows user to delete an existing file """
+    try:
+        filename = input("Which file do you want to delete?: ")
+        print("\n")
+        filename_2 = open(filename, "r")
+        print(filename + ":")
+        print(filename_2.read())
+        print("\n")
+        delete = input("Do you want to delete file: ")
+        if delete == "yes":
+            os.remove(filename)
+            print("file : '" + filename + "'" + " is deleted")
+            line()
+            intro()
+        if delete == "no":
+            line()
+            intro()
+    except FileNotFoundError:
+        print("File does not exists. returning to main menu")
+        line()
+        intro()
 
 
 while True:
