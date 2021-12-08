@@ -12,7 +12,7 @@ import os
 
 
 valid_actions = ["a: create a file", "b: view a file", "c: edit a file",
-                 """d: delete a line in a file""", """ e: delete a file """ ,"""f: Close the program"""]
+                 """d: delete a file""", """e: Close the program"""]
 
 
 def main_menu():
@@ -55,8 +55,6 @@ def intro():
     if input_1 == "d":
         note_4()
     if input_1 == "e":
-        note_5()
-    if input_1 == "f":
         print(" You have closed the program ")
         quit()
     if input_1 not in valid_actions:
@@ -143,16 +141,14 @@ def note_4():
     print(filename_2.read())
     print("\n")
     delete_line = input("What line do you want to delete: ")
-    with open(filename , "r+") as f:
-      d = f.readlines()
-      f.seek(0)
-      for i in d:
-        if i == delete_line:
-            f.write(i)
-        f.truncate()
+    with open(filename) as f:
+        lines = f.readlines()
+    for line in lines:
+        line = line.rstrip()
+        print(line.replace(delete_line, "hello"))
 
 
-def note_5():
+def note_4():
     """ This functions allows user to delete an existing file """
     try:
         filename = input("Which file do you want to delete?: ")
