@@ -33,8 +33,8 @@ def main_menu():
            New file created with the same name will overwrite the existing
            file's contents.
 
-           When entering a file name, the name should be matching the 
-           letter case of the file. 
+           When entering a file name, the name should be matching the
+           letter case of the file.
 
    """)
     print("\n")
@@ -76,6 +76,7 @@ def notes_1():
     print("\n")
     line()
     intro()
+
 
 def line():
     """ This creates a line between the output to seperate code """
@@ -132,20 +133,6 @@ def note_3():
         print("File does not exists. returning to main menu")
         line()
         intro()
-
-def note_4():
-    filename = input("Which file do you want to delete a line from: ")
-    print("\n")
-    filename_2 = open(filename, "r")
-    print(filename + ":")
-    print(filename_2.read())
-    print("\n")
-    delete_line = input("What line do you want to delete: ")
-    with open(filename) as f:
-        lines = f.readlines()
-    for line in lines:
-        line = line.rstrip()
-        print(line.replace(delete_line, "hello"))
 
 
 def note_4():
