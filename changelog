@@ -25,6 +25,6 @@ All notable changes of this project will be documented here
 ### Added
 - code is corrected through the Python Style Guide
 
-## [0.0.5] 2021-12-03
-### Added
-- Modules are created for functions
+## [0.0.5] 2021-12-09
+### Changed
+- Python Style Guide corrections
