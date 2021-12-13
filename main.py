@@ -11,17 +11,22 @@ import os
 # Creates a menu of valid actions in this program
 
 
+def line():
+    """ This creates a line between the output to seperate code """
+    print("------------------------------------------------------------------")
+
+
 valid_actions = ["a: create a file", "b: view a file", "c: edit a file",
                  """d: delete a file""", """e: Close the program"""]
 
 
 def main_menu():
     """ Prints the introduction of the program """
-    print(""" Hi!, Welcome to the Notes Program
+    print("""Hello there, and welcome to Record!
 
-  In this program, you will be able to create,view, edit and delete notes.
+Record is a Python-based program for creating, viewing, editing, and deleting external files.
 
-  You can make unlimited files on this program
+You can create a variety of files on this platform, ranging from text(.txt) files to PY(.py) files, and you can create an unlimited number of files.
 
   *Notes*: Create a file first in order to access other features
            such as editing or viewing a File
@@ -76,11 +81,6 @@ def notes_1():
     print("\n")
     line()
     intro()
-
-
-def line():
-    """ This creates a line between the output to seperate code """
-    print("------------------------------------------------------------------")
 
 
 def note_2():
