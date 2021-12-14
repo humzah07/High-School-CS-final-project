@@ -7,17 +7,18 @@
 
 
 import os
+import help
 
 # Creates a menu of valid actions in this program
 
 
-def line():
+def long_line():
     """ This creates a line between the output to seperate code """
     print("------------------------------------------------------------------")
 
 
 valid_actions = ["a: create a file", "b: view a file", "c: edit a file",
-                 """d: delete a file""", """e: Close the program"""]
+                 """d: delete a file""", """e: Close the program""", """f: Help"""]
 
 
 def main_menu():
@@ -28,18 +29,8 @@ Record is a Python-based program for creating, viewing, editing, and deleting ex
 
 You can create a variety of files on this platform, ranging from text(.txt) files to PY(.py) files, and you can create an unlimited number of files.
 
-  *Notes*: Create a file first in order to access other features
-           such as editing or viewing a File
-
-           You can only write one line when creating a File.
-           To add more, go to "edit a file" to add one line at a time.
-
-           You can not have two files with the same name.
-           New file created with the same name will overwrite the existing
-           file's contents.
-
-           When entering a file name, the name should be matching the
-           letter case of the file.
+Important:
+Enter "f" for "Help", which will guide to the basic guidelines of the program.
 
    """)
     print("\n")
@@ -62,9 +53,11 @@ def intro():
     if input_1 == "e":
         print(" You have closed the program ")
         quit()
-    if input_1 not in valid_actions:
+    if input_1 == "f":
+        help.help()
+    else:
         print("invalid action")
-        line()
+        long_line()
 
 
 def notes_1():
@@ -79,7 +72,7 @@ def notes_1():
     print(file_name + ":")
     print(filename_2.read())
     print("\n")
-    line()
+    long_line()
     intro()
 
 
@@ -92,11 +85,11 @@ def note_2():
         print(filename + ":")
         print(filename_2.read())
         print("\n")
-        line()
+        long_line()
         intro()
     except FileNotFoundError:
         print("File does not exists. returning to main menu")
-        line()
+        long_line()
         intro()
 
 
@@ -124,14 +117,14 @@ def note_3():
             print(filename + ":")
             print(filename_3.read())
             print("\n")
-            line()
+            long_line()
             intro()
         if add_note == "no":
-            line()
+            long_line()
             intro()
     except FileNotFoundError:
         print("File does not exists. returning to main menu")
-        line()
+        long_line()
         intro()
 
 
@@ -148,14 +141,14 @@ def note_4():
         if delete == "yes":
             os.remove(filename)
             print("file : '" + filename + "'" + " is deleted")
-            line()
+            long_line()
             intro()
         if delete == "no":
-            line()
+            long_line()
             intro()
     except FileNotFoundError:
         print("File does not exists. returning to main menu")
-        line()
+        long_line()
         intro()
 
 
