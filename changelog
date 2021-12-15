@@ -36,3 +36,7 @@ All notable changes of this project will be documented here
 ## [0.0.5] 2021-12-14
 ### Added
 - Module named "help" is created consisting of guidelines for the program
+
+## [0.0.6] 2021-12-15
+### Added
+- A Readme file is created and added to the program, which consists of basic information of the program.

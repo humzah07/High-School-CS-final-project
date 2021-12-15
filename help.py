@@ -8,6 +8,11 @@ def help():
 
         Some basic rules of the program:
 
+        Enter the letter associated with the option in the menu to access that part of the program. 
+        For example: to access "a: create a file" in the menu, you need to enter the letter "a" when asked ,"What would you like to do today", and it will then take you to that part of the program.
+
+        When asked a question in the program, enter "yes" or "no" for the program to process the request
+
         Create a file first in order to access other features
         such as editing or viewing a File
 

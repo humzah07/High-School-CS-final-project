@@ -9,12 +9,13 @@
 import os
 import help
 
-# Creates a menu of valid actions in this program
-
 
 def long_line():
     """ This creates a line between the output to seperate code """
     print("------------------------------------------------------------------")
+
+
+# Creates a menu of valid actions in this program
 
 
 valid_actions = ["a: create a file", "b: view a file", "c: edit a file",

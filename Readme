@@ -1,0 +1,32 @@
+What is the program about?
+Record is the name of my large-scale programming project. The program’s main goal is to develop a PC platform that allows users to produce files using a program.  Record would allow users to not only create an unlimited number and type of files, but also to edit, view, and delete them through the program, similar to how Samsung Notes and Notes apps on the iPhone operate. 
+
+How does the program work?
+
+The program is very easy to use, with clear instructions that help the users operate the program. There are four main parts to the program. The main parts are: creating, viewing, editing and deleting external files. 
+
+Creating files:
+In the main menu, there is an option to create external files. After you enter the right letter associated with this option, you are asked the name of the files you want to create, and what you want to write. You are only allowed to write one line at a time. After the process, the external with the entered title name and its contents are saved in the “Files” menu on the Replit program. 
+
+Viewing files:
+After you have created the file, you now have different options to what to do with the program. In the option “view a file”, you can open external files that are specifically created on this Replit program. Other external files that are created or used outside this program will not be accessible. You need to create an external file first in order to view the file.
+
+Editing files:
+After you have created the external file and possibly view it, you can also edit the document. In the option “edit a file”, you can open and edit the external file. First, you will be asked the name of the external file you want to edit, you will then view the file and its contents, and you will be asked again if you want to add anything to the file or not. If you have answered “yes”, you will now be able to add one line to the file. To enter several lines, you need to repeat the process for every line you want to add because you are only allowed to add one line at a time. A solution to this is to access the external file in the “Files” menu on the left side of the Replit program, where you can add as many lines as you want, and it will be automatically saved in the program. 
+
+Deleting files:
+If you want to delete an external file in the program, you can also access the option in the menu. 
+In the option “delete a file”, you can delete a file. You will be asked the name of the file you want to delete. Then, the file and its content will be opened in view mode, and the program will again ask if you want to delete the file in order to confirm the process. After you have entered yes, the file and its contents will be automatically deleted in the program. 
+
+Bonus options
+Downloading files:
+In this option of the Replit program, you can also download the external file if you want to access it on your desktop or on your phone. In the “Files” menu on the left side of the Replit program page, click the three-dots on the right side of the file you want to download. There you will be given a bunch of options with one of the options including “Download”. Click on the option and the process will begin automatically. Now, you can also access the files on your desktop. 
+
+Closing the program:
+In the menu, you are also given an option to “Close the program”. In this option, you can close the program regardless of where you are in the program, and all the files and its content will remain saved in the program.
+
+Help:
+In this option, you are given important rules and guidelines on how the program works and how to use the program correctly. 
+
+Target Audience
+My target audience of this program are those people who not only want to create notes, similar to how they are created in Samsung Notes or in the Notes app in iPhone, but this program is also for those who want to create different types of external files, ranging from text (.txt) files to PY (.py) files, and to also access them to view, edit, delete or download them in their desktops. The lack of an easy-to-use platform on PC that gives users various alternatives such as producing external files and storing them on their desktop, which can aid users in their daily lives, is an issue. For example, a person wants to create a text(.txt) file to download and save on his PC for a specific activity, but he doesn't know what platform to use. His solution is Record, a platform that allows users to create a text file (.txt) for their needs, as well as edit, download, and save the external file to their PC.
