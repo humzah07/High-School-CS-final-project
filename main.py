@@ -19,16 +19,20 @@ def long_line():
 
 
 valid_actions = ["a: create a file", "b: view a file", "c: edit a file",
-                 """d: delete a file""", """e: Close the program""", """f: Help"""]
+                 """d: delete a file""", """e: Close the program""",
+                 """f: Help"""]
 
 
 def main_menu():
     """ Prints the introduction of the program """
     print("""Hello there, and welcome to Record!
 
-Record is a Python-based program for creating, viewing, editing, and deleting external files.
+Record is a Python-based program for creating, viewing, editing, and deleting
+external files.
 
-You can create a variety of files on this platform, ranging from text(.txt) files to PY(.py) files, and you can create an unlimited number of files.
+You can create a variety of files on this platform, ranging from
+text(.txt) files to PY(.py) files, and
+you can create an unlimited number of files.
 
 Important:
 Enter "f" for "Help", which will guide to the basic guidelines of the program.
